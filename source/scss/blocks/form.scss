@@ -51,7 +51,7 @@
   //change task_1
   position: absolute;
   right: 0;
-  margin-right: calc(160px + 3rem);
+  margin-right: 22rem;
   //end change task_1
 
   &:focus {
@@ -68,7 +68,7 @@
   }
 
   @media (orientation: portrait) {
-    margin-right: 1rem;
+    margin-right: 5rem;
     padding: 0 2.5rem;
     width: calc(100% - 5rem);
     height: 4rem;
@@ -77,10 +77,11 @@
 
   @media (max-width: $tablet) and (orientation: landscape) {
     width: calc(100% - 9rem);
+    margin-right: 7rem;
   }
 
   @media (max-width: $mobile) and (orientation: landscape) {
-    margin-right: 1rem;
+    margin-right: 5rem;
     padding: 0 2.5rem;
     width: calc(100% - 5rem);
     height: 4rem;
@@ -91,7 +92,7 @@
 .form__button {
   flex-grow: 1;
   //change
-  max-width: 160px;
+  max-width: 20rem;
   width: 100%;
   //end change
 

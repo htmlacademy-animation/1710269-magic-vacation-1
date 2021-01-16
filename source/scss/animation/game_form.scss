@@ -1,3 +1,5 @@
+$desktop_form: 21rem;
+
 section {
   &#game {
     &.active {
@@ -13,5 +15,25 @@ section {
   }
   100% {
     width: calc(100% - 21rem);
+  }
+}
+@media (max-width: $tablet) and (orientation: landscape) {
+  @keyframes game_form {
+    0% {
+      width: calc(0% - 7rem);
+    }
+    100% {
+      width: calc(100% - 7rem);
+    }
+  }
+}
+@media (max-width: $mobile) and (orientation: landscape), (orientation: portrait) {
+  @keyframes game_form {
+    0% {
+      width: calc(0% - 5rem);
+    }
+    100% {
+      width: calc(100% - 5rem);
+    }
   }
 }
