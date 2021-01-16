@@ -3,6 +3,12 @@ export default () => {
   let menuToggler = document.querySelector(`.js-menu-toggler`);
   let menuLinks = document.querySelectorAll(`.js-menu-link`);
 
+  //change task_1
+  setTimeout(() => {
+    header.classList.add('active');
+  }, 2000);
+  //end change task_1 
+
   if (menuToggler) {
     menuToggler.addEventListener(`click`, function () {
       if (header.classList.contains(`page-header--menu-opened`)) {

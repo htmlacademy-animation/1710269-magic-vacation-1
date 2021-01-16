@@ -1,0 +1,27 @@
+header {
+  .social-block {
+    .social-block__list {
+      li {
+        opacity: 0;
+        transition: 1s;
+      }
+    }
+
+    &--active {
+      .social-block__list {
+        li {
+          opacity: 1;
+        }
+      }
+      .social-block__list li:first-child {
+        transition-delay: .1s
+      }
+      .social-block__list li:nth-child(2) {
+        transition-delay: .3s
+      }
+      .social-block__list li:last-child {
+        transition-delay: .5s
+      }
+    }
+  }
+}

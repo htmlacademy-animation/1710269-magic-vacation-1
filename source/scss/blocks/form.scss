@@ -2,6 +2,11 @@
   position: relative;
   display: flex;
   align-items: center;
+  //change task_1
+  &#message-form {
+    justify-content: flex-end;
+  }
+  //end change task_1
 }
 
 .form__label {
@@ -43,6 +48,11 @@
   border: 0;
   border-radius: 3rem;
   outline: none;
+  //change task_1
+  position: absolute;
+  right: 0;
+  margin-right: calc(160px + 3rem);
+  //end change task_1
 
   &:focus {
     border: 1px solid $c-purple;
@@ -80,6 +90,10 @@
 
 .form__button {
   flex-grow: 1;
+  //change
+  max-width: 160px;
+  width: 100%;
+  //end change
 
   @media (orientation: portrait) {
     position: relative;
