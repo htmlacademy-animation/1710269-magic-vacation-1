@@ -1,0 +1,67 @@
+@mixin animation {
+  .animation {
+    opacity: 0;
+    animation-fill-mode: both;
+
+    &._type {
+      &_fadeIn {
+        animation-name: fadeIn;
+      }
+      &_slideInUp {
+        animation-name: fadeIn, slideUp;
+      }
+      &_slideInRight {
+        animation-name: fadeIn, slideRight;
+      }
+      &_slideInLeft {
+        animation-name: fadeIn, slideLeft;
+      }
+    }
+  }
+}
+section {
+  &#top, &#prizes, &#rules {
+    &.active {
+      @include animation;
+    }
+  }
+  &#story {
+    .swiper-slide-next, .swiper-slide-active {
+      @include animation;
+    }
+  }
+}
+
+
+@keyframes slideUp {
+  from {
+    transform: translateY(15px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes slideRight {
+  from {
+    transform: translateX(15px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes slideLeft {
+  from {
+    transform: translateX(-15px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}

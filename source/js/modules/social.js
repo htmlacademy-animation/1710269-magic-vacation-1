@@ -6,4 +6,4 @@ export default () => {
   socialBlock.addEventListener(`mouseleave`, function () {
     socialBlock.classList.remove(`social-block--active`);
   });
-};
+}; 
