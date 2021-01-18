@@ -1,0 +1,26 @@
+.screen__footer {
+    transform: translateY(100%);
+    transition: 1s;
+}
+.load {
+  .screen__footer {
+    transform: translateY(0%)
+  }
+  header, nav {
+    @include animation;
+  }
+  .social-block__toggler::before {
+    animation: start cubic-bezier(0,1.09,1,1) .5s 1s both;
+  }
+}
+@keyframes start {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
