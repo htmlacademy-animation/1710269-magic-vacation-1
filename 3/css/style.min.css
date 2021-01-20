@@ -3321,16 +3321,20 @@ section#top.active .animation._type_slideInRight, section#prizes.active .animati
 section#top.active .animation._type_slideInLeft, section#prizes.active .animation._type_slideInLeft, section#rules.active .animation._type_slideInLeft {
   animation-name: fadeIn, slideLeft; }
 
-section#story .swiper-slide-next .animation._type_fadeIn, section#story .swiper-slide-active .animation._type_fadeIn {
+section#story .swiper-slide-next .animation._type_fadeIn,
+section#story .swiper-slide-active .animation._type_fadeIn {
   animation-name: fadeIn; }
 
-section#story .swiper-slide-next .animation._type_slideInUp, section#story .swiper-slide-active .animation._type_slideInUp {
+section#story .swiper-slide-next .animation._type_slideInUp,
+section#story .swiper-slide-active .animation._type_slideInUp {
   animation-name: fadeIn, slideUp; }
 
-section#story .swiper-slide-next .animation._type_slideInRight, section#story .swiper-slide-active .animation._type_slideInRight {
+section#story .swiper-slide-next .animation._type_slideInRight,
+section#story .swiper-slide-active .animation._type_slideInRight {
   animation-name: fadeIn, slideRight; }
 
-section#story .swiper-slide-next .animation._type_slideInLeft, section#story .swiper-slide-active .animation._type_slideInLeft {
+section#story .swiper-slide-next .animation._type_slideInLeft,
+section#story .swiper-slide-active .animation._type_slideInLeft {
   animation-name: fadeIn, slideLeft; }
 
 @keyframes slideUp {
@@ -3380,22 +3384,23 @@ section#game.active .form__field {
     100% {
       width: calc(100% - 5rem); } } }
 
-.load header .js-menu-link:after {
+.load header li > a:after {
   opacity: 0; }
 
-.load header.active .js-menu-link:after, .load header .js-menu-link.active:after {
+.load header.active li > a:after,
+.load header li > a.active:after {
   opacity: 1; }
 
-.load header nav .js-menu-link:after {
+.load header nav li > a:after {
   width: 0%;
   animation: menu_down cubic-bezier(0, 1.09, 1, 1) 0.5s both; }
 
-.load header nav .js-menu-link:hover:after {
+.load header nav li > a:hover:after {
   left: 0;
   right: auto;
   animation: menu_rise cubic-bezier(0, 1.09, 1, 1) 0.5s both; }
 
-.load header nav .js-menu-link.active:after {
+.load header nav li > a.active:after {
   left: 0;
   right: auto;
   animation: menu_rise cubic-bezier(0, 1.09, 1, 1) 0.5s 1s both; }
@@ -3430,7 +3435,7 @@ header .social-block--active .social-block__list li:last-child {
 
 .screen__footer {
   transform: translateY(100%);
-  transition: 1s; }
+  transition: all 1s cubic-bezier(0, 1.09, 1, 1) 0s; }
 
 .load .screen__footer {
   transform: translateY(0%); }
@@ -3448,7 +3453,7 @@ header .social-block--active .social-block__list li:last-child {
   animation-name: fadeIn, slideLeft; }
 
 .load .social-block__toggler::before {
-  animation: start cubic-bezier(0, 1.09, 1, 1) 0.5s 1s both; }
+  animation: start cubic-bezier(0, 0, 0.5, 1.5) 0.5s 1s both; }
 
 @keyframes start {
   0% {
