@@ -2,6 +2,10 @@
     transform: translateY(100%);
     transition: all 1s cubic-bezier(0,1.09,1,1) 0s;
 }
+.social-block__toggler::before {
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.5s cubic-bezier(0, 0, 0.5, 2) 0s;
+}
 .load {
   .screen__footer {
     transform: translateY(0%)
@@ -10,17 +14,6 @@
     @include animation;
   }
   .social-block__toggler::before {
-    animation: start cubic-bezier(0, 0, 0.5, 1.5) .5s 1s both;
-  }
-}
-@keyframes start {
-  0% {
-    transform: translate(-50%, -50%) scale(1);
-  }
-  50% {
-    transform: translate(-50%, -50%) scale(1.2);
-  }
-  100% {
     transform: translate(-50%, -50%) scale(1);
   }
 }
