@@ -72,6 +72,7 @@
 
 .screen__footer-wrapper {
   @include container;
+  z-index: 10;
 
   @media (max-width: $tablet) and (orientation: portrait) {
     opacity: 0;
@@ -301,9 +302,9 @@
   }
 }
 
-.screen--prizes {
-  background-color: $c-dark;
-}
+// .screen--prizes {
+//   background-color: $c-dark;
+// }
 
 .screen--game {
   position: relative;

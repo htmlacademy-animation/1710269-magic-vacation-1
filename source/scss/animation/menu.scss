@@ -1,29 +1,40 @@
-header {
-  .js-menu-link:after {
-    opacity: 0;
-  }
-  &.active .js-menu-link:after, .js-menu-link.active:after  {
-    opacity: 1;
-  }
-  nav {
-    .js-menu-link {
-      &:after {
-        width: 0%;
-        animation: menu_down .5s both;
-      }
-      &:hover {
-        &:after { 
-          left: 0;
-          right: auto;
-          animation: menu_rise .5s both;
-        }
-      }
+.load {
+  header {
+    li>a:after {
+      opacity: 0;
+    }
 
-      &.active {
+    &.active li>a:after,
+    li>a.active:after {
+      opacity: 1;
+    }
+
+    .page-header__logo {
+      transform: translateX(0);
+      opacity: 1;
+    }
+
+    nav {
+      li>a {
         &:after {
-          left: 0;
-          right: auto;
-          animation: menu_rise .5s both;
+          width: 0%;
+          animation: menu_down cubic-bezier(0, 1.09, 1, 1) .5s both;
+        }
+
+        &:hover {
+          &:after {
+            left: 0;
+            right: auto;
+            animation: menu_rise cubic-bezier(0, 1.09, 1, 1) .5s both;
+          }
+        }
+
+        &.active {
+          &:after {
+            left: 0;
+            right: auto;
+            animation: menu_rise cubic-bezier(0, 1.09, 1, 1) .5s 1s both;
+          }
         }
       }
     }
@@ -34,14 +45,17 @@ header {
   0% {
     width: 0%;
   }
+
   100% {
     width: 100%;
   }
 }
+
 @keyframes menu_down {
   0% {
     width: 100%;
   }
+
   100% {
     width: 0%;
   }

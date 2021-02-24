@@ -1,32 +1,43 @@
+.animation {
+  opacity: 0;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0, 1.09, 1, 1);
+}
+
 @mixin animation {
   .animation {
-    opacity: 0;
-    animation-fill-mode: both;
+    &._type_fadeIn {
+      animation-name: fadeIn;
+    }
 
-    &._type {
-      &_fadeIn {
-        animation-name: fadeIn;
-      }
-      &_slideInUp {
-        animation-name: fadeIn, slideUp;
-      }
-      &_slideInRight {
-        animation-name: fadeIn, slideRight;
-      }
-      &_slideInLeft {
-        animation-name: fadeIn, slideLeft;
-      }
+    &._type_slideInUp {
+      animation-name: fadeIn, slideUp;
+    }
+
+    &._type_slideInRight {
+      animation-name: fadeIn, slideRight;
+    }
+
+    &._type_slideInLeft {
+      animation-name: fadeIn, slideLeft;
     }
   }
 }
+
 section {
-  &#top, &#prizes, &#rules {
+
+  &#top,
+  &#prizes,
+  &#rules {
     &.active {
       @include animation;
     }
   }
+
   &#story {
-    .swiper-slide-next, .swiper-slide-active {
+
+    .swiper-slide-next,
+    .swiper-slide-active {
       @include animation;
     }
   }
@@ -37,30 +48,37 @@ section {
   from {
     transform: translateY(15px);
   }
+
   to {
     transform: translateY(0);
   }
 }
+
 @keyframes fadeIn {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
 }
+
 @keyframes slideRight {
   from {
     transform: translateX(15px);
   }
+
   to {
     transform: translateY(0);
   }
 }
+
 @keyframes slideLeft {
   from {
     transform: translateX(-15px);
   }
+
   to {
     transform: translateY(0);
   }

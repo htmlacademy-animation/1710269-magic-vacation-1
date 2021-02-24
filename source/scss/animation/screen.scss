@@ -1,0 +1,32 @@
+body {
+  background-color: #fff !important;
+}
+
+section {
+  .background__container {
+    background: $c-dark;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: translateY(100%);
+    z-index: 20;
+  }
+
+  &.active {
+    .background__container {
+      // transition: transform .5s 1s;
+      // transform: translateY(0%)
+      animation: start .5s both;
+    }
+  }
+}
+@keyframes start {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0%)
+  }
+}

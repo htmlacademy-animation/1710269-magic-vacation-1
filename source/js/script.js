@@ -23,3 +23,7 @@ animation();
 
 const fullPageScroll = new FullPageScroll();
 fullPageScroll.init();
+
+window.addEventListener('load', e => {
+  document.querySelector('body').classList.add('load')
+}); 

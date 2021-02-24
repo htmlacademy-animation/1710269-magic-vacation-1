@@ -20,11 +20,23 @@ export default class FullPageScroll {
   }
 
   onScroll(evt) {
+    this.animateContainerByScroll();
     const currentPosition = this.activeScreen;
     this.reCalculateActiveScreenPosition(evt.deltaY);
     if (currentPosition !== this.activeScreen) {
-      this.changePageDisplay();
+      //нашла функцию перелистывания. Ее надо ставить на promis. Сначала выполняется анимация блока, потом уже вот эта функция
+      setTimeout(() => {
+        this.changePageDisplay();
+
+      }, 10000)
     }
+  }
+
+  animateContainerByScroll() {
+    let lastSection = this.screenElements[this.activeScreen];
+    // let lastSectionAnimationContainer =  
+    //нашла предыдущую секцию. Можно найти и анимировать контейнер
+    console.log(lastSection)
   }
 
   onUrlHashChanged() {
@@ -40,6 +52,8 @@ export default class FullPageScroll {
   }
 
   changeVisibilityDisplay() {
+    //начинать вот от сюда
+    //проблема - показывает текущий
     this.screenElements.forEach((screen) => {
       screen.classList.add(`screen--hidden`);
       screen.classList.remove(`active`);
